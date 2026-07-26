@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  background: #eefbf3;
+  color: #14532d;
+}
+
+/* ---------- Layout ---------- */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+}
+
+.app-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #14532d;
+  color: #fff;
+  padding: 14px 24px;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar {
+  width: 200px;
+  background: #fff;
+  border-right: 1px solid #d1fae5;
+  padding: 16px 0;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 12px 20px;
+  color: #166534;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar-link.active,
+.sidebar-link:hover {
+  background: #dcfce7;
+  color: #16a34a;
+  border-right: 3px solid #16a34a;
+}
+
+/* ---------- Auth pages ---------- */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  width: 360px;
+}
+
+.auth-switch {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---------- Forms ---------- */
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2f855a;
+}
+
+input,
+select,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.inline-form,
+.inline-form-block {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.inline-form-block {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.inline-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #16a34a;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #15803d;
+}
+
+.btn-secondary {
+  background: #d1fae5;
+  color: #14532d;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+/* ---------- Page ---------- */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-loading {
+  padding: 40px;
+  text-align: center;
+}
+
+/* ---------- Stats ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin: 0 0 4px 0;
+  color: #16a34a;
+}
+
+/* ---------- Table ---------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #d1fae5;
+}
+
+.data-table th {
+  background: #ecfdf5;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #4b7a5a;
+}
+
+/* ---------- Tickets ---------- */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.ticket-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: block;
+}
+
+.ticket-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-card-desc {
+  color: #4b7a5a;
+  font-size: 0.9rem;
+}
+
+.ticket-card-footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: #2f855a;
+}
+
+.ticket-detail-header {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.log-list {
+  list-style: none;
+  padding: 0;
+}
+
+.log-list li {
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.log-note {
+  font-style: italic;
+  color: #2f855a;
+  margin-top: 4px;
+}
+
+.log-time {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-open {
+  background: #dcfce7;
+  color: #166534;
+}
+.badge-progress {
+  background: #fef9c3;
+  color: #a16207;
+}
+.badge-resolved {
+  background: #dcfce7;
+  color: #15803d;
+}
+.badge-closed {
+  background: #d1fae5;
+  color: #2f855a;
+}
+.badge-low {
+  background: #d1fae5;
+  color: #2f855a;
+}
+.badge-medium {
+  background: #fef9c3;
+  color: #a16207;
+}
+.badge-high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ---------- Feedback ---------- */
+.feedback-submit-block {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.chart-wrapper {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+
+.ticket-card{border-left:5px solid #16a34a;border-radius:14px;transition:.3s;}
+.ticket-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(22,163,74,.2);}
+.stat-card{border-top:5px solid #16a34a;border-radius:14px;}
+.btn{border-radius:24px;}
+.auth-form{border-radius:18px;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#16a34a;box-shadow:0 0 0 3px rgba(22,163,74,.15);}
